@@ -116,7 +116,91 @@
                 </button>
               </div>
             </div>
+            !-- Quantity & Add to Cart -->
+            <div class="mt-6 flex flex-wrap items-center space-x-4">
+              <div class="flex items-center border border-gray-300 rounded-lg">
+                <button
+                  class="px-4 py-2 text-gray-600 hover:text-gray-800 quantity-button"
+                >
+                  -
+                </button>
+                <span id="quantity" class="px-4">0</span>
+                <button
+                  class="px-4 py-2 text-gray-600 hover:text-gray-800 quantity-button"
+                >
+                  +
+                </button>
+              </div>
+              <div class="flex items-center space-x-2">
+                <button
+                  class="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700"
+                  id="add-to-cart"
+                >
+                  Add to Cart
+                </button>
 
+                <button class="text-purple-600 hover:text-purple-700 text-2xl">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+
+    <!-- Modal for Cart Preview -->
+    <div
+      id="cart-modal"
+      class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50 hidden"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg w-96 md:w-2/3 lg:w-1/2">
+        <h2 class="text-xl font-bold text-gray-800">Your Cart</h2>
+
+        <!-- Cart Items Table -->
+        <div class="overflow-x-auto mt-4">
+          <table class="min-w-full table-auto">
+            <thead>
+              <tr class="text-left border-b">
+                <th class="py-2 px-4">Item</th>
+                <th class="py-2 px-4">Color</th>
+                <th class="py-2 px-4">Size</th>
+                <th class="py-2 px-4">Quantity</th>
+                <th class="py-2 px-4">Price</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items">
+              <!-- Cart items will go here dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex justify-end gap-2 mt-4">
+          <button
+            id="continue-shopping"
+            class="px-6 py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400"
+          >
+            Continue Shopping
+          </button>
+          <button
+            class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+            id="checkout"
+          >
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/band-color.js"></script>
+    <script src="./js/price-box.js"></script>
+    <script src="./js/plusminus-button.js"></script>
+    <script src="./js/addto-cart.js"></script>
+    <script src="./js/checkoutandModal.js"></script> -->
             
   </body>
 </html>
